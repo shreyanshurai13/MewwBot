@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ff">
+  <title>Meww Bot</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="chat-card" aria-label="Meww Bot chat">
+    <header class="topbar">
+      <div class="brand-icon" aria-hidden="true">🐾</div>
+      <div class="brand-copy"><strong>Meww Bot</strong><span>tiny talk. big attitude.</span></div>
+      <div class="mood-status" id="mood-status" role="status" aria-live="polite"><span class="status-cat">😼</span><span id="mood-copy">watching you...</span></div>
+      <button class="reset-button" id="reset-chat" type="button" aria-label="Start a new chat" title="Start a new chat">↻ <span>New chat</span></button>
+    </header>
+
+    <section class="cat-scene" aria-label="A cat is watching the chat">
+      <img src="/cat-reference-clean.png" alt="A dotted cat behind a colourful progress line" class="cat-art">
+      <svg class="cat-eyes" viewBox="0 0 1000 500" preserveAspectRatio="none" aria-hidden="true">
+        <g class="eye eye-left">
+          <ellipse class="eye-white" cx="420" cy="276" rx="64" ry="48" />
+          <ellipse class="eye-line" cx="420" cy="276" rx="64" ry="48" />
+          <ellipse class="pupil" cx="440" cy="278" rx="12" ry="31" />
+          <path class="brow" d="M365 235 Q405 211 460 242" />
+        </g>
+        <g class="eye eye-right">
+          <ellipse class="eye-white" cx="605" cy="276" rx="64" ry="48" />
+          <ellipse class="eye-line" cx="605" cy="276" rx="64" ry="48" />
+          <ellipse class="pupil" cx="609" cy="278" rx="12" ry="31" />
+          <path class="brow" d="M552 242 Q605 211 654 235" />
+        </g>
+      </svg>
+    </section>
+
+    <section class="chat-area">
+      <div class="intro">
+        <div><p class="eyebrow">MEWW BOT</p><h1>This cat knows Everything.</h1></div>
+        <span class="only-knows">Wanna test it.</span>
+      </div>
+
+      <div class="conversation" id="conversation" aria-live="polite" aria-label="Chat messages">
+        <div class="message assistant">
+          <div class="avatar" aria-hidden="true">🐱</div>
+          <div class="message-content">
+            <div class="bubble">Hello</div>
+            <div class="bubble follow-up">Before we continue, which language are you comfortable with?</div>
+            <div class="language-options" aria-label="Choose a language">
+              <button type="button" data-language="English">English</button>
+              <button type="button" data-language="Hindi">Hindi</button>
+            </div>
+            <time>Just now</time>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-prompts" id="quick-prompts" aria-label="Try a greeting">
+        <span>Try:</span><button type="button" data-prompt="Hi">Hi</button><button type="button" data-prompt="Hello">Hello</button>
+      </div>
+      <form class="composer" id="chat-form">
+        <label class="sr-only" for="message-input">Message Meww Bot</label>
+        <textarea id="message-input" name="message" placeholder="Message Meww Bot..." autocomplete="off" maxlength="500" rows="1" required></textarea>
+        <button class="send-button" type="submit" aria-label="Send message">➜</button>
+      </form>
+      <p class="hint">made with <span>♥</span> and one very judgmental cat</p>
+    </section>
+  </main>
+</body>
+</html>
